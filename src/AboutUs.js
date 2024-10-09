@@ -6,7 +6,7 @@ import Link3 from "./assets/LINKS/LINK3.jpg";
 function AboutUs() {
     return (
         <div className="about-us" id='discover'>
-            <h2>Descubre más sobre Luxury</h2>
+            <h2>Discover More About Luxury</h2>
             <div className="links">
                 <div className="link1">
                     <img src={Link1} alt="links1" />
