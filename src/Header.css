@@ -1,0 +1,79 @@
+/* Estilos base - Mobile-first */
+
+/* Contenedor principal del header */
+.header {
+  width: 100%;
+  height: auto; /* La altura se ajusta al contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar el contenido verticalmente */
+  align-items: center; /* Centrar el contenido horizontalmente */
+  color: white;
+  background-color: black;
+  opacity: 0.7;
+  padding: 10px; /* Añadir padding para móviles */
+}
+.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+.visible {
+  opacity: 1;
+  display: flex;
+  visibility: visible;
+  height: auto;
+}
+.invisible {
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  height: 0;
+}
+/* Contenedor para los botones */
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around; /* Espacio entre los botones */
+  text-transform: uppercase;
+
+}
+.buttons a {
+  text-decoration: none;
+  color: grey;
+  cursor: pointer;
+}
+.buttons a:hover {
+  text-decoration: underline 1px solid grey;
+}
+
+/* Contenedor del logo */
+.logo {
+  display: flex;
+  justify-content: center; /* Centrar logo horizontalmente */
+  align-items: center; /* Centrar logo verticalmente */
+}
+
+/* Estilo para el logo */
+.logo img {
+  width: 50%; /* Tamaño más pequeño para pantallas móviles */
+}
+
+@media (min-width: 768px) {
+  .open {
+    visibility: hidden;
+    height: 0;
+  }
+  .buttons {
+    visibility: visible;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+  }
+}
+

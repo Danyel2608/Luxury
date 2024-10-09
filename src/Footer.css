@@ -1,0 +1,128 @@
+/* Estilos base - Mobile-first */
+
+/* Contenedor principal del footer */
+.footer {
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+    padding: 20px; /* Padding ajustado para móviles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de la parte superior del footer */
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Apilamos los elementos en móviles */
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+    text-align: center; /* Centrar contenido en móviles */
+}
+
+/* Sección de marca */
+.footer-brand h1 {
+    font-size: 24px; /* Tamaño más pequeño para móviles */
+    color: rgba(229, 183, 0, 0.5);
+}
+
+.footer-brand p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #aaa;
+}
+
+/* Enlaces de navegación */
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    font-size: 16px; /* Tamaño más pequeño para móviles */
+    margin-bottom: 10px;
+    color: rgba(229, 183, 0, 0.5);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    color: rgba(229, 183, 0, 0.5);
+}
+
+/* Información de contacto */
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Redes sociales */
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-social .social-icons a {
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+    color: rgba(229, 183, 0, 0.5);
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Puntos de quiebre - Ajustes para pantallas más grandes */
+
+/* Tablets (768px y mayores) */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row; /* Organiza los elementos en filas */
+        justify-content: space-between; /* Espacia los elementos */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .footer-brand, .footer-links, .footer-contact, .footer-social {
+        margin-bottom: 0;
+        width: 23%; /* Distribuye el espacio en cuatro columnas */
+    }
+}
+
+/* Escritorio (1024px y mayores) */
+@media (min-width: 1024px) {
+    .footer {
+        padding: 40px 20px; /* Aumenta el padding en pantallas grandes */
+    }
+
+    .footer-brand h1 {
+        font-size: 28px; /* Tamaño más grande del título en escritorio */
+    }
+
+    .footer-links h3, .footer-contact h3, .footer-social h3 {
+        font-size: 18px; /* Tamaño mayor para encabezados */
+    }
+}

@@ -1,0 +1,110 @@
+/* Estilos base - Mobile-first */
+
+/* Contenedor principal para la cuadrícula de modelos */
+.models {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100%, 1fr)
+  ); /* Cada celda ocupa el 100% en móviles */
+  gap: 20px; /* Espacio entre las celdas del grid */
+  padding: 20px; /* Espaciado interior */
+  background-color: black;
+}
+
+.car-models {
+  background-color: black;
+  padding-top: 2em;
+  text-align: center; /* Centra el contenido horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Encabezado de la sección de modelos */
+.car-models h2 {
+  color: grey; /* Color del encabezado */
+  text-transform: uppercase;
+  opacity: 0.5;
+  border-bottom: 1px solid grey;
+  margin: 5em 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilo para cada celda (cada coche) */
+.model-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, opacity 0.5s ease; /* Transición de tamaño y opacidad */
+  opacity: 0; /* Comienza invisible */
+}
+
+/* Animación al pasar el mouse sobre el contenedor */
+.model-item:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilo para las imágenes */
+.model-item img {
+  width: 100%; /* La imagen toma el 100% del ancho del contenedor */
+  height: auto; /* La altura se ajusta automáticamente */
+  border-radius: 0.5rem;
+}
+
+/* Estilo para la descripción */
+.model-item p {
+  margin: 10px 0; /* Espacio alrededor del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  color: #333; /* Color oscuro del texto */
+  text-align: center; /* Centrar texto */
+  padding: 0 10px; /* Espaciado interior horizontal */
+}
+
+/* Animación visible */
+.model-item.visible {
+  opacity: 1; /* Se hace visible al entrar */
+}
+
+/* Puntos de quiebre - Ajustes para pantallas más grandes */
+
+/* Tablets (768px y mayores) */
+@media (min-width: 768px) {
+  .models {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(400px, 1fr)
+    ); /* 1 columna mínima de 200px */
+  }
+
+  .car-models h2 {
+    font-size: 1.5em; /* Tamaño de fuente más grande en tablets */
+  }
+
+  .model-item p {
+    font-size: 18px; /* Aumenta el tamaño de fuente de la descripción */
+  }
+}
+
+/* Escritorio (1024px y mayores) */
+@media (min-width: 1024px) {
+  .models {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(400px, 1fr)
+    ); /* Aumenta el tamaño mínimo de las celdas en escritorio */
+  }
+
+  .car-models h2 {
+    font-size: 2em; /* Tamaño de fuente más grande en escritorio */
+  }
+
+  .model-item p {
+    font-size: 20px; /* Aumenta el tamaño de fuente de la descripción */
+  }
+}

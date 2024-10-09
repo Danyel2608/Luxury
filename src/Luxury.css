@@ -1,0 +1,38 @@
+/* Estilos base - Mobile-first */
+
+/* Contenedor principal del contenido de lujo */
+.luxury-content {
+  width: 100%; /* Se asegura de ocupar el 100% del ancho disponible */
+  max-width: 100vw; /* Limita el ancho máximo al tamaño de la ventana del navegador */
+  height: auto; /* Permite que el contenido crezca según sea necesario */
+  min-height: 74vh; /* Mantiene una altura mínima del 74% de la ventana */
+  padding: 10px; /* Añade espacio alrededor en dispositivos móviles */
+  display: flex; /* Layout flexible */
+  flex-direction: column; /* Organiza en columna para pantallas pequeñas */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  overflow-x: hidden; /* Evita cualquier desbordamiento en el eje horizontal */
+  box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho */
+}
+
+
+/* Puntos de quiebre - Ajustes para pantallas más grandes */
+
+/* Tablets (768px y mayores) */
+@media (min-width: 768px) {
+  .luxury-content {
+      flex-direction: row; /* Cambia a fila en tablets */
+      justify-content: space-between; /* Distribuye el contenido de manera uniforme */
+      padding: 20px; /* Aumenta el padding en tablets */
+      min-height: 60vh; /* Permite que la altura sea un poco menor */
+  }
+}
+
+/* Escritorio (1024px y mayores) */
+@media (min-width: 1024px) {
+  .luxury-content {
+    max-width: min-content;
+      min-height: 50vh; /* Ajusta la altura mínima en pantallas grandes */
+      padding: 25vh; /* Más padding para pantallas grandes */
+  }
+}

@@ -1,0 +1,133 @@
+/* Estilos generales - Mobile-first */
+
+/* Sección About Us */
+.about-us {
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  max-width: 100vw; /* Limita el ancho al 100% de la ventana para evitar desbordamiento */
+  height: auto; /* La altura se ajusta al contenido */
+  background-color: black;
+  color: white;
+  padding: 1em; /* Añadido padding para espacio en móviles */
+  box-sizing: border-box; /* Asegura que padding y borde estén dentro del ancho */
+  overflow-x: hidden; /* Evita desbordamiento horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us h2 {
+  color: grey; /* Color del encabezado */
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 1.5em;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  text-align: center;
+}
+
+/* Sección Links */
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imágenes dentro de los links */
+.links img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease; /* Animación al pasar el ratón */
+}
+.links img:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilos para cada link */
+.link1,
+.link2,
+.link3 {
+  padding: 1em; /* Padding más ajustado para pantallas pequeñas */
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo del texto dentro de los links */
+.link1 h3,
+.link2 h3,
+.link3 h3 {
+  position: absolute;
+  top: 10px; /* Posicionar el texto más cerca del borde superior en móviles */
+  left: 10px; /* Posicionar el texto más cerca del borde izquierdo */
+  margin: 0;
+  padding: 5px;
+  font-size: 10px; /* Texto más pequeño en móviles */
+  color: white;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+/* Puntos de quiebre - Ajustes para pantallas más grandes */
+
+/* Tablets (768px y mayores) */
+@media (min-width: 768px) {
+  .about-us h2 {
+    margin: 5em 0;
+    font-size: 1.5rem; /* Aumentar el tamaño del título */
+  }
+
+  .links {
+    flex-direction: row; /* Los elementos se alinean en fila en tablets */
+    flex-wrap: wrap; /* Permite que los elementos envuelvan si es necesario */
+  }
+
+  .link1,
+  .link2,
+  .link3 {
+    padding: 1.5em;
+    width: 25%; /* Mostrar dos elementos por fila en pantallas de tabletas */
+    margin: 1%; /* Espacio entre los elementos */
+  }
+
+  .link1 h3,
+  .link2 h3,
+  .link3 h3 {
+    font-size: 14px; /* Texto ligeramente más grande */
+    top: 40px; /* Ajustar la posición superior */
+    left: 40px; /* Ajustar la posición izquierda */
+  }
+}
+
+/* Escritorio (1024px y mayores) */
+@media (min-width: 1024px) {
+  .about-us {
+    padding: 2em 0; /* Más espacio en el padding */
+  }
+
+  .about-us h2 {
+    font-size: 2rem; /* Aumentar el tamaño del título en escritorio */
+  }
+
+  .links {
+    justify-content: center; /* Distribuir los elementos de forma equitativa */
+  }
+
+  .link1,
+  .link2,
+  .link3 {
+    width: 20%; /* Mostrar tres elementos por fila en pantallas grandes */
+    padding: 2em;
+  }
+
+  .link1 h3,
+  .link2 h3,
+  .link3 h3 {
+    font-size: 16px; /* Texto más grande en pantallas grandes */
+    top: 30px; /* Ajustar la posición superior */
+    left: 30px; /* Ajustar la posición izquierda */
+  }
+}
